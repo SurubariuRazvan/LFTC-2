@@ -1,0 +1,60 @@
+{
+  "description": "The definition of a double(can be of any size, accepts form without fractional part)",
+  "startState": "q0",
+  "states": [
+    {
+      "name": "q0",
+      "isFinalState": false,
+      "transitions": {
+        "q1": "-,+",
+        "q2": "1-9",
+        "q3": 0
+      }
+    },
+    {
+      "name": "q1",
+      "isFinalState": false,
+      "transitions": {
+        "q2": "1-9"
+      }
+    },
+    {
+      "name": "q2",
+      "isFinalState": true,
+      "transitions": {
+        "q2": "0-9",
+        "q4": "."
+      }
+    },
+    {
+      "name": "q3",
+      "isFinalState": true,
+      "transitions": {
+        "q4": "."
+      }
+    },
+    {
+      "name": "q4",
+      "isFinalState": false,
+      "transitions": {
+        "q5": "0-9"
+      }
+    },
+    {
+      "name": "q5",
+      "isFinalState": true,
+      "transitions": {
+        "q5": "1-9",
+        "q6": "0"
+      }
+    },
+    {
+      "name": "q6",
+      "isFinalState": false,
+      "transitions": {
+        "q5": "1-9",
+        "q6": "0"
+      }
+    }
+  ]
+}

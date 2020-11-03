@@ -1,0 +1,53 @@
+{
+  "description": "The definition of a string(starts and ends with \", can be of any size, can contain escaped quotes)",
+  "fsm_link": "https://i.imgur.com/IMoyoqV.png",
+  "startState": "q0",
+  "states": [
+    {
+      "name": "q0",
+      "isFinalState": false,
+      "transitions": {
+        "q1": "\""
+      }
+    },
+    {
+      "name": "q1",
+      "isFinalState": false,
+      "transitions": {
+        "q1": ",a-z,A-Z, ,0-9,',+,-,(,),{,}",
+        "q2": "\\",
+        "q5": "\""
+      }
+    },
+    {
+      "name": "q2",
+      "isFinalState": false,
+      "transitions": {
+        "q1": ",a-z,A-Z, ,0-9,',+,-,(,),{,}",
+        "q3": "\""
+      }
+    },
+    {
+      "name": "q3",
+      "isFinalState": false,
+      "transitions": {
+        "q3": ",a-z,A-Z, ,0-9,'",
+        "q4": "\\"
+      }
+    },
+    {
+      "name": "q4",
+      "isFinalState": false,
+      "transitions": {
+        "q3": ",a-z,A-Z, ,0-9,'",
+        "q1": "\""
+      }
+    },
+    {
+      "name": "q5",
+      "isFinalState": true,
+      "transitions": {
+      }
+    }
+  ]
+}

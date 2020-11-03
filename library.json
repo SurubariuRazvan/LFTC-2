@@ -1,0 +1,49 @@
+{
+  "description": "The definition of a library(can be of any size, can have a termination)",
+  "startState": "q0",
+  "states": [
+    {
+      "name": "q0",
+      "isFinalState": false,
+      "transitions": {
+        "q1": "<"
+      }
+    },
+    {
+      "name": "q1",
+      "isFinalState": false,
+      "transitions": {
+        "q2": "a-z,A-Z"
+      }
+    },
+    {
+      "name": "q2",
+      "isFinalState": false,
+      "transitions": {
+        "q2": "a-z,A-Z,0-9",
+        "q3": ".",
+        "q5": ">"
+      }
+    },
+    {
+      "name": "q3",
+      "isFinalState": false,
+      "transitions": {
+        "q4": "h"
+      }
+    },
+    {
+      "name": "q4",
+      "isFinalState": false,
+      "transitions": {
+        "q5": ">"
+      }
+    },
+    {
+      "name": "q5",
+      "isFinalState": true,
+      "transitions": {
+      }
+    }
+  ]
+}

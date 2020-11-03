@@ -1,0 +1,104 @@
+
+TS ID
+i	:3
+isPrime	:2
+main	:0
+number	:1
+
+TS CONST
+"Is prime"	:5
+"Isn't \"yay, i can use escaped quotes\" prime"	:6
+0	:3
+1	:1
+2	:2
+3	:4
+<iostream>	:0
+
+FIP
+#include    21	:-
+<iostream>  1	:0
+int         22	:-
+main        0	:0
+(           13	:-
+)           14	:-
+{           17	:-
+int         22	:-
+number      0	:1
+;           9	:-
+int         22	:-
+isPrime     0	:2
+=           10	:-
+1           1	:1
+;           9	:-
+std::cin>>  24	:-
+number      0	:1
+;           9	:-
+if          26	:-
+(           13	:-
+number      0	:1
+%           16	:-
+2           1	:2
+==          4	:-
+0           1	:3
+)           14	:-
+{           17	:-
+isPrime     0	:2
+=           10	:-
+0           1	:3
+;           9	:-
+}           18	:-
+else        28	:-
+{           17	:-
+for         27	:-
+(           13	:-
+int         22	:-
+i           0	:3
+=           10	:-
+3           1	:4
+;           9	:-
+i           0	:3
+<           11	:-
+number      0	:1
+/           8	:-
+2           1	:2
+;           9	:-
+i           0	:3
+=           10	:-
+i           0	:3
++           19	:-
+2           1	:2
+)           14	:-
+if          26	:-
+(           13	:-
+number      0	:1
+%           16	:-
+i           0	:3
+==          4	:-
+0           1	:3
+)           14	:-
+isPrime     0	:2
+=           10	:-
+0           1	:3
+;           9	:-
+}           18	:-
+if          26	:-
+(           13	:-
+isPrime     0	:2
+==          4	:-
+1           1	:1
+)           14	:-
+{           17	:-
+std::cout<< 25	:-
+"Is prime"  1	:5
+;           9	:-
+}           18	:-
+else        28	:-
+{           17	:-
+std::cout<< 25	:-
+"Isn't \"yay, i can use escaped quotes\" prime"1	:6
+;           9	:-
+}           18	:-
+return      29	:-
+0           1	:3
+;           9	:-
+}           18	:-

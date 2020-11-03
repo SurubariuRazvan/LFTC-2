@@ -1,0 +1,35 @@
+{
+  "description": "The definition of an integer(can be of any size)",
+  "startState": "q0",
+  "states": [
+    {
+      "name": "q0",
+      "isFinalState": false,
+      "transitions": {
+        "q1": "-,+",
+        "q2": "1-9",
+        "q3": "0"
+      }
+    },
+    {
+      "name": "q1",
+      "isFinalState": false,
+      "transitions": {
+        "q2": "1-9"
+      }
+    },
+    {
+      "name": "q2",
+      "isFinalState": true,
+      "transitions": {
+        "q2": "0-9"
+      }
+    },
+    {
+      "name": "q3",
+      "isFinalState": true,
+      "transitions": {
+      }
+    }
+  ]
+}

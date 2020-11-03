@@ -1,0 +1,34 @@
+{
+  "description": "In class activity",
+  "startState": "q0",
+  "states": [
+    {
+      "name": "q0",
+      "isFinalState": false,
+      "transitions": {
+        "q1": "1",
+        "q3": "0"
+      }
+    },
+    {
+      "name": "q1",
+      "isFinalState": false,
+      "transitions": {
+        "q2": "1"
+      }
+    },
+    {
+      "name": "q2",
+      "isFinalState": true,
+      "transitions": {
+        "q2": "0,1"
+      }
+    },
+    {
+      "name": "q3",
+      "isFinalState": true,
+      "transitions": {
+      }
+    }
+  ]
+}

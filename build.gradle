@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-core:2.12.0-rc1'
+    compile 'com.google.code.gson:gson:2.8.6'
+    compile 'com.google.guava:guava:30.0-jre'
+
+    compile group: 'org.controlsfx', name: 'controlsfx', version: '8.0.5'
+    compile group: 'com.jfoenix', name: 'jfoenix', version: '9.0.9'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.9'
+    compile group: 'de.jensd', name: 'fontawesomefx-commons', version: '9.1.2'
+    compile 'de.jensd:fontawesomefx-fontawesome:4.7.0-9.1.2'
+    compile 'de.jensd:fontawesomefx-materialdesignfont:2.0.26-9.1.2'
+    compile 'de.jensd:fontawesomefx-materialicons:2.2.0-9.1.2'
+}
+
+
+javafx {
+    version = "11.0.1"
+    modules = ['javafx.controls', 'javafx.fxml']
+}

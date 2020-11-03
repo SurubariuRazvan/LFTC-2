@@ -1,0 +1,20 @@
+{
+  "description": "The definition of an ID(can be of any size)",
+  "startState": "q0",
+  "states": [
+    {
+      "name": "q0",
+      "isFinalState": false,
+      "transitions": {
+        "q1": "a-z,A-Z"
+      }
+    },
+    {
+      "name": "q1",
+      "isFinalState": true,
+      "transitions": {
+        "q1": "a-z,A-Z,0-9"
+      }
+    }
+  ]
+}

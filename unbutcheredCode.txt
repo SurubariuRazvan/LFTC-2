@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main(){
+    int number ;
+    int isPrime = 1 ;
+    std::cin>>number ;
+    if (number % 2 == 0){
+        isPrime = 0 ;
+    }else{
+        for (int i = 3 ; i < number / 2 ; i = i + 2)
+            if (number % i == 0)
+                isPrime = 0 ;
+        }
+    if (isPrime == 1){
+        std::cout<<"Is prime" ;
+    }else{
+        std::cout<<"Isn't prime" ;
+    }
+    return 0;
+}
