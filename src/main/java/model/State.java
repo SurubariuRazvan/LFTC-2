@@ -33,14 +33,6 @@ public class State {
     
     @Override
     public String toString() {
-//        return "State{" +
-//                "name='" + name +
-//                ", isFinalState=" + isFinalState +
-//                ", transitions=" + inverseTransitions.keySet()
-//                .stream()
-//                .collect(Collectors.toMap(State::getName, state->inverseTransitions.get(state)))
-//                .toString() +
-//                '}';
         return "State{" +
                 "name='" + name +
                 ", isFinalState=" + isFinalState +

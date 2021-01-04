@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyTreeMap<K extends Comparable<K>, V> {
-    class Node {
+    private class Node {
         K key;
         V value;
         Node left;
@@ -19,7 +19,7 @@ public class MyTreeMap<K extends Comparable<K>, V> {
         }
     }
 
-    class StackNode {
+    private class StackNode {
         Node value;
         StackNode next;
 
@@ -29,7 +29,7 @@ public class MyTreeMap<K extends Comparable<K>, V> {
         }
     }
 
-    class Stack {
+    private class Stack {
         StackNode head;
 
         public Stack() {

@@ -29,13 +29,14 @@
       "name": "q3",
       "isFinalState": false,
       "transitions": {
-        "q4": "h"
+        "q4": "a-z,A-Z"
       }
     },
     {
       "name": "q4",
       "isFinalState": false,
       "transitions": {
+        "q4": "a-z,A-Z",
         "q5": ">"
       }
     },

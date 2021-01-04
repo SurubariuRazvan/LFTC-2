@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDrawer?>
-<?import com.jfoenix.controls.JFXHamburger?>
-<?import com.jfoenix.controls.JFXListView?>
-<?import com.jfoenix.controls.JFXTabPane?>
-<?import com.jfoenix.controls.JFXTextArea?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.*?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.layout.*?>
 <StackPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../css/default.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainWindowController">
     <GridPane>
         <columnConstraints>
@@ -30,17 +17,17 @@
         </rowConstraints>
         <StackPane fx:id="rooPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.rowIndex="1">
             <JFXTabPane fx:id="p1p2Table">
-                <Tab text="Part One">
+                <Tab text="L2: Part One">
                     <JFXTabPane fx:id="p1TabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE">
                         <Tab fx:id="p1InputDataTab" closable="false" onSelectionChanged="#tabChanged" text="Input data">
                             <VBox alignment="CENTER">
                                 <GridPane VBox.vgrow="ALWAYS">
                                     <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0"/>
                                     </columnConstraints>
                                     <rowConstraints>
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
                                     </rowConstraints>
                                     <AnchorPane GridPane.hgrow="ALWAYS">
                                         <JFXTextArea fx:id="finiteStateMachineText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -139,17 +126,17 @@
                         </Tab>
                     </JFXTabPane>
                 </Tab>
-                <Tab text="Part two">
+                <Tab text="L2: Part two">
                     <JFXTabPane fx:id="p2TabPane">
                         <Tab fx:id="p2InputDataTab" closable="false" text="Input data">
                             <VBox alignment="CENTER">
                                 <padding>
-                                    <Insets top="5.0" />
+                                    <Insets top="5.0"/>
                                 </padding>
                                 <GridPane VBox.vgrow="ALWAYS">
                                     <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0"/>
                                     </columnConstraints>
                                     <rowConstraints>
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -197,38 +184,221 @@
                                     <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                                 </padding>
                                 <VBox alignment="CENTER" style="-fx-background-color: -fx-primary;" GridPane.rowSpan="2">
-                                    <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="FIP">
+                                    <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="FIP" viewOrder="2.0">
                                         <opaqueInsets>
-                                            <Insets />
+                                            <Insets/>
                                         </opaqueInsets>
                                     </Label>
                                     <JFXListView fx:id="p2FIP" VBox.vgrow="ALWAYS">
-                              <padding>
-                                 <Insets bottom="5.0" left="5.0" top="5.0" />
-                              </padding></JFXListView>
+                                        <padding>
+                                            <Insets bottom="5.0" left="5.0" top="5.0"/>
+                                        </padding>
+                                    </JFXListView>
                                 </VBox>
                                 <VBox alignment="CENTER" GridPane.columnIndex="1">
                                     <Label text="TS ID" />
                                     <JFXListView fx:id="p2TSID" VBox.vgrow="ALWAYS">
-                              <padding>
-                                 <Insets bottom="5.0" left="5.0" top="5.0" />
-                              </padding></JFXListView>
+                                        <padding>
+                                            <Insets bottom="5.0" left="5.0" top="5.0"/>
+                                        </padding>
+                                    </JFXListView>
                                 </VBox>
                                 <VBox alignment="CENTER" GridPane.columnIndex="2">
                                     <Label text="TS CONST" />
                                     <JFXListView fx:id="p2TSCONST" maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
-                              <padding>
-                                 <Insets bottom="5.0" left="5.0" top="5.0" />
-                              </padding></JFXListView>
+                                        <padding>
+                                            <Insets bottom="5.0" left="5.0" top="5.0"/>
+                                        </padding>
+                                    </JFXListView>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
-                                    <Label text="LEXICAL ERRORS" />
+                                    <Label text="LEXICAL ERRORS"/>
                                     <JFXListView fx:id="p2Errors" VBox.vgrow="ALWAYS">
-                              <padding>
-                                 <Insets bottom="5.0" left="5.0" top="5.0" />
-                              </padding></JFXListView>
+                                        <padding>
+                                            <Insets bottom="5.0" left="5.0" top="5.0"/>
+                                        </padding>
+                                    </JFXListView>
                                 </VBox>
                             </GridPane>
+                        </Tab>
+                    </JFXTabPane>
+                </Tab>
+                <Tab text="L5">
+                    <JFXTabPane fx:id="p5TabPane">
+                        <Tab fx:id="p5InputDataTab" closable="false" text="Input grammar">
+                            <VBox alignment="CENTER">
+                                <padding>
+                                    <Insets top="5.0"/>
+                                </padding>
+                                <GridPane VBox.vgrow="ALWAYS">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0"/>
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                    </rowConstraints>
+                                    <AnchorPane GridPane.hgrow="ALWAYS">
+                                        <JFXTextArea fx:id="grammarText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <opaqueInsets>
+                                                <Insets/>
+                                            </opaqueInsets>
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" top="5.0"/>
+                                            </padding>
+                                        </JFXTextArea>
+                                        <JFXHamburger fx:id="p5HamburgerButton" alignment="TOP_RIGHT" fillWidth="false" onMouseClicked="#p5ToggleFileFormat" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0"/>
+                                    </AnchorPane>
+                                    <JFXDrawer fx:id="p5FileDrawer" defaultDrawerSize="400.0" direction="RIGHT" maxWidth="0.0" miniDrawerSize="0.0" resizableOnDrag="true" resizeContent="true" GridPane.columnIndex="1">
+                                        <JFXListView fx:id="p5FileDrawerListView">
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                            </padding>
+                                        </JFXListView>
+                                    </JFXDrawer>
+                                </GridPane>
+                                <HBox alignment="CENTER" styleClass="bottomHBox">
+                                    <JFXButton fx:id="p5ChooseFileButton" buttonType="RAISED" onAction="#p5ChooseFile" text="Choose file">
+                                        <HBox.margin>
+                                            <Insets left="5.0" right="5.0" top="5.0"/>
+                                        </HBox.margin>
+                                    </JFXButton>
+                                </HBox>
+                            </VBox>
+                        </Tab>
+                        <Tab fx:id="p5InterpretTab" closable="false" text="P1:Interpret">
+                            <VBox>
+                                <padding>
+                                    <Insets top="5.0"/>
+                                </padding>
+                                <JFXListView fx:id="p5List" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                </JFXListView>
+                                <HBox alignment="BOTTOM_CENTER" fillHeight="false" style="-fx-background-color: -fx-primary;" styleClass="bottomHBox">
+                                    <JFXButton fx:id="terminalsButton" onAction="#showTerminals" text="Terminals">
+                                        <HBox.margin>
+                                            <Insets left="10.0" right="10.0" top="5.0"/>
+                                        </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="nonTerminalsButton" onAction="#showNonTerminals" text="NonTerminals">
+                                        <HBox.margin>
+                                            <Insets left="10.0" right="10.0" top="5.0"/>
+                                        </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="productionRulesButton" onAction="#showProductionRules" text="Production rules">
+                                        <HBox.margin>
+                                            <Insets left="10.0" right="10.0" top="5.0"/>
+                                        </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="productionRulesForTerminalButton" contentDisplay="RIGHT" onMouseClicked="#showProductionRulesForTerminal" text="Production rules for">
+                                        <HBox.margin>
+                                            <Insets left="10.0" right="10.0" top="5.0"/>
+                                        </HBox.margin>
+                                        <graphic>
+                                            <JFXComboBox fx:id="terminalsComboBox" promptText="terminal">
+                                                <opaqueInsets>
+                                                    <Insets/>
+                                                </opaqueInsets>
+                                                <padding>
+                                                    <Insets bottom="-1.0" top="-1.0"/>
+                                                </padding>
+                                            </JFXComboBox>
+                                        </graphic>
+                                    </JFXButton>
+                                </HBox>
+                            </VBox>
+                        </Tab>
+                        <Tab fx:id="p5TestSequenceTab" text="P2:Test sequence">
+                            <VBox alignment="CENTER">
+                                <padding>
+                                    <Insets top="5.0"/>
+                                </padding>
+                                <JFXTabPane side="RIGHT" VBox.vgrow="ALWAYS">
+                                    <Tab text="sequence">
+                                        <VBox alignment="CENTER">
+                                            <padding>
+                                                <Insets right="7.0" top="5.0"/>
+                                            </padding>
+                                            <JFXTextArea fx:id="p5TestSequenceTextArea" viewOrder="2.0" VBox.vgrow="ALWAYS">
+                                                <padding>
+                                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                                </padding>
+                                            </JFXTextArea>
+                                            <JFXTextField fx:id="p5TestSequenceResult" alignment="CENTER" editable="false" style="-fx-background-color: -fx-primary;">
+                                                <VBox.margin>
+                                                    <Insets bottom="1.0" left="40.0" right="40.0"/>
+                                                </VBox.margin>
+                                            </JFXTextField>
+                                            <HBox alignment="CENTER" styleClass="bottomHBox">
+                                                <VBox.margin>
+                                                    <Insets/>
+                                                </VBox.margin>
+                                                <padding>
+                                                    <Insets left="5.0"/>
+                                                </padding>
+                                                <JFXButton fx:id="p5CheckButton" onAction="#p5CheckSequence" text="Check">
+                                                    <HBox.margin>
+                                                        <Insets right="5.0" top="5.0"/>
+                                                    </HBox.margin>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+                                                    </padding>
+                                                </JFXButton>
+                                            </HBox>
+                                        </VBox>
+                                    </Tab>
+                                    <Tab text="details">
+                                        <JFXListView fx:id="p5SequenceResultListView">
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                            </padding>
+                                        </JFXListView>
+                                    </Tab>
+                                </JFXTabPane>
+                            </VBox>
+                        </Tab>
+                        <Tab fx:id="p6InputCode" closable="false" text="P3:MLP code">
+                            <VBox alignment="CENTER">
+                                <padding>
+                                    <Insets top="5.0"/>
+                                </padding>
+                                <JFXTabPane fx:id="p6TabPane" side="RIGHT" VBox.vgrow="ALWAYS">
+                                    <Tab fx:id="p6ChooseCode" text="Choose code">
+                                        <VBox>
+                                            <JFXTextArea fx:id="p6CodeText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                                                <opaqueInsets>
+                                                    <Insets/>
+                                                </opaqueInsets>
+                                                <padding>
+                                                    <Insets bottom="5.0" left="5.0" top="5.0"/>
+                                                </padding>
+                                            </JFXTextArea>
+                                            <HBox alignment="CENTER" styleClass="bottomHBox">
+                                                <JFXButton fx:id="p6ChooseFileButton" buttonType="RAISED" onAction="#p6ChooseFile" text="Choose file">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" right="5.0" top="5.0"/>
+                                                    </HBox.margin>
+                                                </JFXButton>
+                                            </HBox>
+                                            <padding>
+                                                <Insets right="7.0" top="5.0"/>
+                                            </padding>
+                                        </VBox>
+                                    </Tab>
+                                    <Tab fx:id="p6InterpretCode" onSelectionChanged="#p6TabChanged" text="Interpret">
+                                        <JFXListView fx:id="p6InterpretCodeList">
+                                            <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                            </padding>
+                                        </JFXListView>
+                                    </Tab>
+                                </JFXTabPane>
+                            </VBox>
                         </Tab>
                     </JFXTabPane>
                 </Tab>

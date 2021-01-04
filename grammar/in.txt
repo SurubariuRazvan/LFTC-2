@@ -1,0 +1,5 @@
+S -> id = expression | expression
+expression -> expression temp | ( expression ) | M
+temp -> OPERATOR expression
+M -> const | id
+OPERATOR -> + | - | * | %

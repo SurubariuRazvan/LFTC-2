@@ -155,6 +155,41 @@
     -fx-background-radius: 5px;
 }
 
+/*Combo-Box*/
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0 0 0 0, 0;
+    -fx-padding: 0 0 0 0;
+}
+
+.jfx-combo-box .input-line, .jfx-combo-box .input-focused-line {
+    visibility: false;
+}
+
+.combo-box .combo-box-popup .list-cell:hover {
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+}
+
+.jfx-combo-box .cell {
+    -fx-background-color: transparent;
+}
+
+#productionRulesForTerminalButton .list-cell {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-secondary;
+}
+
+#productionRulesForTerminalButton:hover .list-cell, #productionRulesForTerminalButton:focused .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-primary;
+}
+
+#productionRulesForTerminalButton:hover .combo-box-popup .list-view, #productionRulesForTerminalButton:focused .combo-box-popup .list-view {
+    -fx-background-color: derive(-fx-secondary, 20%);
+
+}
+
 /*JFXDialog styling*/
 .jfx-layout-heading {
     -fx-background-color: derive(-fx-tertiary, -20%);
@@ -188,18 +223,18 @@
 }
 
 /*auto-complete popup*/
-.auto-complete-popup > .list-view {
-    -fx-background-insets: 0 0 0 0, 0 0 0 0;
-}
+/*.auto-complete-popup > .list-view {*/
+/*    -fx-background-insets: 0 0 0 0, 0 0 0 0;*/
+/*}*/
 
-.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-background-color: -fx-primary;
-    -fx-text-fill: -fx-primarytext;
-}
+/*.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {*/
+/*    -fx-background-color: -fx-primary;*/
+/*    -fx-text-fill: -fx-primarytext;*/
+/*}*/
 
-.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
-    -fx-text-fill: -fx-primary;
-}
+/*.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {*/
+/*    -fx-text-fill: -fx-primary;*/
+/*}*/
 
 /*cancel disabled look*/
 * :disabled {
@@ -297,13 +332,24 @@
     -fx-background-color: transparent;
 }
 
-#testSequenceResult {
+#testSequenceResult, #p5TestSequenceResult {
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+#testSequenceResult {
     -fx-text-fill: -fx-tertiary;
 }
 
 .window-close-icon {
     -fx-fill: red;
+}
+
+.red-text {
+    -fx-text-fill: -fx-red;
+}
+
+.green-text {
+    -fx-text-fill: -fx-tertiary;
 }
 
 .window-alwaysOnTop-icon:hover {
@@ -317,7 +363,7 @@
 }
 
 .tab {
-    -fx-pref-width: 160;
+    -fx-pref-width: 200px;
     -fx-pref-height: 44px;
     -fx-background-color: -fx-primary;
 }
@@ -372,6 +418,6 @@
     -fx-text-fill: -fx-tertiary;
 }
 
-#p1TabPane .tab-selected-line, #p2TabPane .tab-selected-line {
+#p1TabPane .tab-selected-line, #p2TabPane .tab-selected-line, #p5TabPane .tab-selected-line {
     -fx-background-color: derive(-fx-secondary, 10%);
 }

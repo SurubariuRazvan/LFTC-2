@@ -1,0 +1,44 @@
+program        	-> libraries functions
+				| functions
+libraries      	-> LIBRARY libraries
+				| LIBRARY
+functions      	-> function functions
+				| function
+function       	-> declaration '(' ')' '{' function_body '}'
+				| declaration '(' parameters ')' '{' function_body '}'
+declaration    	-> TYPE ID
+parameters     	-> declaration ',' parameters
+				| declaration
+function_body  	-> instructions RETURN expression ';'
+				| RETURN expression ';'
+instructions   	-> instruction instructions
+				| instruction
+instruction    	-> initialization ';'
+				| assignation ';'
+				| if_instruction
+				| for_instruction
+				| CIN ID ';'
+				| COUT expression ';'
+initialization 	-> declaration '=' expression init_list
+				| declaration '=' expression
+				| declaration init_list
+				| declaration
+init_list      	-> ',' ID '=' expression init_list
+				| ',' ID '=' expression
+				| ',' ID init_list
+				| ',' ID
+assignation    	-> ID '=' expression
+expression     	-> expression OPERATORS expression
+				| '(' expression ')'
+				| operator
+operator       	-> CONST
+				| ID
+if_instruction 	-> if_start '{' instructions '}' ELSE '{' instructions '}'
+				| if_start '{' instructions '}'
+				| if_start instruction ELSE '{' instructions '}'
+				| if_start instruction
+				| if_start '{' instructions '}' ELSE instruction
+				| if_start instruction ELSE instruction
+if_start		-> IF '(' expression ')'
+for_instruction	-> FOR '(' initialization ';' expression ';' assignation ')' '{' instructions '}'
+                | FOR '(' initialization ';' expression ';' assignation ')' instruction
